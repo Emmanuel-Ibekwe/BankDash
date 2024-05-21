@@ -80,6 +80,12 @@ body {
     position: absolute;
   }
 
+  @media screen and (min-width: 1024px) {
+    .slice-inner-div {
+      font-size: 12px;
+    }
+  }
+
   /* .slice-inner-div p {
     display: none;
     cursor: default;
