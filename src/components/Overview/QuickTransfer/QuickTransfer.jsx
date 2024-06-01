@@ -165,7 +165,7 @@ export default function QuickTransfer() {
               onBlur={() => setOutline(false)}
             />
             <div
-              className={`absolute right-0 top-0 box-border  bg-[#1814F3] flex w-[100px] xl:w-[125px] lg:h-10 xl:h-[50px] rounded-full p-2.5 items-center justify-around`}
+              className={`absolute right-0 top-0 box-border  bg-blue_3 flex w-[100px] xl:w-[125px] lg:h-10 xl:h-[50px] rounded-full p-2.5 items-center justify-around`}
             >
               <p className="text-white">Send</p>
               <button className={`focus:outline-none `} type="button">

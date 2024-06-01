@@ -17,7 +17,7 @@ export default function Graph() {
       <div className="w-[90%] flex justify-end pb-3 xl:pb-5 mx-auto">
         <div className="flex space-x-6">
           <div className="flex items-center space-x-2">
-            <div className="bg-[#1814F3]  w-[15px] h-[15px] rounded-full" />
+            <div className="bg-blue_3  w-[15px] h-[15px] rounded-full" />
             <p className="text-text_2 text-xs min-[900px]:text-[15px]">
               Deposit
             </p>
