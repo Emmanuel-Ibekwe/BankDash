@@ -43,6 +43,19 @@ body {
     width: 1px !important;
     height: 1px !important;
   }
+  .scrollbar1::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  .scrollbar1::-webkit-scrollbar-track {
+    background: white;
+  }
+
+  .scrollbar1::-webkit-scrollbar-thumb {
+    @apply bg-text_2;
+    width: 10px !important;
+    height: 1px !important;
+  }
 
   .slice-container {
     display: flex;
@@ -80,11 +93,26 @@ body {
     position: absolute;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 640px) {
     .slice-inner-div {
       font-size: 12px;
     }
   }
+  /* 
+  .apexcharts-xaxis {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .apexcharts-yaxis {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: white; /* Optional: to cover the overflow content */
+  /* } */
 
   /* .slice-inner-div p {
     display: none;
