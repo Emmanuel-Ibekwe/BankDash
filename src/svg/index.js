@@ -11,8 +11,10 @@ import CoinIcon from "./Coin";
 import CardIcon from "./Card";
 import PaypalIcon from "./Paypal";
 import TelegramIcon from "./Telegram";
+import CloseIcon from "./Close";
 
 export {
+  CloseIcon,
   CreditCardIcon,
   TelegramIcon,
   CoinIcon,
