@@ -27,8 +27,8 @@ export default function RecentTransactions() {
   ];
 
   return (
-    <div className="lg:min-w-[231px] w-full xl:min-w-[335px] lg:h-[170px] xl:h-[230px] flex-initial bg-white rounded-3xl lg:px-3 lg:py-4 xl:p-5">
-      <div className="flex lg:space-y-2 xl:space-y-3 flex-col w-full justify-center">
+    <div className="flex justify-center items-center w-full lg:min-w-[231px]   h-[230px] min-[900px]:h-[190px] lg:h-[170px] xl:h-[230px] flex-initial bg-white rounded-3xl px-5 py-6 min-[900px]:px-3 min-[900px]:py-4 xl:p-5">
+      <div className="flex space-y-3.5 lg:space-y-2 xl:space-y-3 flex-col w-full justify-center items-center">
         {transactions.map(transaction => (
           <Transaction
             key={transaction.title}

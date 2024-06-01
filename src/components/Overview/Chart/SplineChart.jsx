@@ -50,14 +50,16 @@ export default function SplineChart() {
     const screenWidth = window.innerWidth;
     if (screenWidth >= 1280) {
       setHeight(240);
-    } else if (screenWidth >= 1024) {
+    } else {
       setHeight(190);
     }
   }, []);
 
   return (
-    <div className="lg:min-w-[423px] w-[59%] xl:min-w-[635px] lg:h-[220px] xl:h-[276px] bg-white rounded-3xl lg:px-3 lg:py-4 xl:p-5">
-      <Chart options={options} series={options.series} height={height} />
+    <div className=" w-full lg:min-w-[423px]   h-[223px] xl:h-[276px] bg-white rounded-3xl px-3 pt-4 pb-0 min-[406px]:py-4 xl:p-5">
+      <div className="w-full translate-y-4 min-[406px]:translate-y-0">
+        <Chart options={options} series={options.series} height={height} />
+      </div>
     </div>
   );
 }

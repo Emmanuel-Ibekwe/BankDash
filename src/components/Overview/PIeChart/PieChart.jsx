@@ -39,8 +39,10 @@ export default function PieChart() {
     const screenWidth = window.innerWidth;
     if (screenWidth >= 1280) {
       lengths = [200, 210, 230, 240];
-    } else if (screenWidth >= 1024) {
+    } else if (screenWidth >= 900) {
       lengths = [110, 130, 150, 160];
+    } else {
+      lengths = [117, 138, 159, 170];
     }
 
     console.log("loans: ", findAngles(loans));
@@ -183,7 +185,7 @@ export default function PieChart() {
   return (
     <div
       id="pie-chart"
-      className="w-[180px] xl:w-[280px] h-[180px] xl:h-[280px] relative"
+      className="translate-y-3 min-[900px]:translate-y-0 w-[280px] min-[900px]:w-[180px] xl:w-[280px] h-[280px] min-[900px]:h-[180px] xl:h-[280px] relative"
     ></div>
   );
 }

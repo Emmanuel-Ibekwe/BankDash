@@ -10,7 +10,7 @@ export default function WithdrawalBar({ withdrawal, maxValue, day }) {
   return (
     <div
       id={`${day}-w`}
-      className="w-2.5 xl:w-[15px] h-[30%] bg-[#16DBCC] rounded-b-[30px] rounded-t-[30px]"
+      className="w-[7px] min-[900px]:w-2.5 xl:w-[15px] h-[30%] bg-[#16DBCC] rounded-b-[30px] rounded-t-[30px]"
     ></div>
   );
 }

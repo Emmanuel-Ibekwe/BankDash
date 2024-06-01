@@ -94,10 +94,10 @@ export default function QuickTransfer() {
   };
 
   return (
-    <div className="lg:min-w-[295px] w-[40%] xl:min-w-[400px] lg:h-[220px] xl:h-[276px] rounded-3xl bg-white lg:px-5 xl:px-6 py-8">
-      <div className="w-full lg:h-28 xl:h-36 relative">
+    <div className="w-full lg:min-w-[295px]  xl:min-w-[400px] h-[223px] xl:h-[276px] rounded-3xl bg-white px-5 xl:px-6 py-8">
+      <div className="w-full min-[390px]:w-[90%] min-[500px]:w-[65%] min-[548px]:w-[60%] min-[658px]:w-1/2 min-[760px]:w-full lg:h-28 xl:h-36 relative">
         <button
-          className={` bg-white opacity-70 lg:w-10 xl:w-[50px] z-20 absolute -left-6 top-1/2  lg:h-10 xl:h-[50px] rounded-full ease-in border border-white ${
+          className={` bg-white opacity-70 w-10 xl:w-[50px] z-20 absolute -left-6 top-1/2  h-10 xl:h-[50px] rounded-full ease-in border border-white ${
             isPressed && btnId === "left"
               ? "-translate-y-1/4 shadow-md"
               : "shadow-xl -translate-y-1/2"
@@ -109,10 +109,10 @@ export default function QuickTransfer() {
           &lt;
         </button>
 
-        <div className="relative lg:h-28 xl:h-36 lg:w-60 xl:w-80  overflow-hidden ">
+        <div className="relative h-28 xl:h-36 w-60 xl:w-80  overflow-hidden ">
           {groupIntoThrees(staff).map((group, i) => (
             <div
-              className="absolute top-0 flex lg:w-60 xl:w-80 h-full justify-between slide transition duration-300"
+              className="absolute top-0 flex w-60 xl:w-80 h-full justify-between slide transition duration-300"
               data-slide={`${i}`}
             >
               <StaffProfile
@@ -138,7 +138,7 @@ export default function QuickTransfer() {
           ))}
         </div>
         <button
-          className={`bg-white  cursor-pointer opacity-60 lg:w-10 xl:w-[50px] z-20 absolute -right-4 top-1/2  lg:h-10 xl:h-[50px] rounded-full ease-in border border-white ${
+          className={`bg-white  cursor-pointer opacity-60 w-10 xl:w-[50px] z-20 absolute -right-4 top-1/2  h-10 xl:h-[50px] rounded-full ease-in border border-white ${
             isPressed && btnId === "right"
               ? "-translate-y-1/4 shadow-md"
               : "shadow-xl -translate-y-1/2"
@@ -151,21 +151,21 @@ export default function QuickTransfer() {
         </button>
       </div>
 
-      <div className="flex w-full items-center justify-between lg:mt-2 xl:mt-4">
-        <p className="text-text_2 lg:text-xs xl:text-sm lg:w-[35%] w-[40%]">
+      <div className="flex w-full items-center justify-between mt-2 xl:mt-4">
+        <p className="text-text_2 text-xs xl:text-sm w-[35%] w-[40%]">
           Write Amount
         </p>
-        <div className={`flex lg:w-[65%] xl:w-[60%] items-center justify-end`}>
-          <div className="lg:h-10 xl:h-[50px] rounded-full lg:w-[168px] xl:w-[265px] justify-end relative">
+        <div className={`flex w-[65%] xl:w-[60%] items-center justify-end`}>
+          <div className="h-10 xl:h-[50px] rounded-full w-[168px] xl:w-[265px] justify-end relative">
             <input
               type="number"
-              className="text-text_2 lg:text-xs xl:text-base w-full h-full bg-[#EDF1F7] pl-4 lg:pr-[90px] xl:pr-[120px] rounded-full focus:outline-text_2"
+              className="text-text_2 text-xs xl:text-base w-full h-full bg-[#EDF1F7] pl-4 pr-[90px] xl:pr-[120px] rounded-full focus:outline-text_2"
               placeholder="Amount"
               onFocus={() => setOutline(true)}
               onBlur={() => setOutline(false)}
             />
             <div
-              className={`absolute right-0 top-0 box-border  bg-[#1814F3] flex lg:w-[100px] xl:w-[125px] lg:h-10 xl:h-[50px] rounded-full p-2.5 items-center justify-around`}
+              className={`absolute right-0 top-0 box-border  bg-[#1814F3] flex w-[100px] xl:w-[125px] lg:h-10 xl:h-[50px] rounded-full p-2.5 items-center justify-around`}
             >
               <p className="text-white">Send</p>
               <button className={`focus:outline-none `} type="button">

@@ -14,54 +14,58 @@ export default function Overview() {
   };
 
   return (
-    <div className="w-full box-border lg:pt-[110px] xl:pt-[120px] lg:px-[2.5%] xl:px-[2%] bg-background_1 pb-8 mb-[1000px]">
-      <section className="flex justify-between pb-2 w-full box-border">
-        <div className="w-[31.5%]">
-          <h2 className="text-primary_2 font-semibold text-lg xl:text-xl pb-2">
-            My Cards
-          </h2>
-          <CreditCard
-            isBlue={true}
-            cardHolder={cardDetails.cardHolder}
-            validThru={cardDetails.validThru}
-            balance={cardDetails.balance}
-            cardNo={cardDetails.cardNo}
-          />
+    <div className="w-full box-border pt-6 mt-[140px] lg:mt-0 mb-[1000px] z-50 lg:pt-[110px] xl:pt-[120px] px-5 lg:px-[2.5%] xl:px-[2%] :bg-background_1 pb-8 ">
+      <section className=" flex flex-col min-[900px]:flex-row min-[900px]:space-x-[2.75%] lg:justify-between pb-2 w-full box-border ">
+        {/* Credit Card Section */}
+        <div className="pb-1 flex space-x-5 min-[720px]:justify-between w-full min-[900px]:w-[65.75%] scrollbar min-[600px]:scrollbar1 overflow-x-scroll min-[720px]:overflow-x-auto">
+          <div className="w-[47.9%] min-w-[265px] min-[600px]:min-w-[320px] min-[900px]:min-w-[231px] lg:min-w-[231px]">
+            <h2 className="text-primary_2 font-semibold text-base min-[600px]:text-lg xl:text-xl pb-2">
+              My Cards
+            </h2>
+            <CreditCard
+              isBlue={true}
+              cardHolder={cardDetails.cardHolder}
+              validThru={cardDetails.validThru}
+              balance={cardDetails.balance}
+              cardNo={cardDetails.cardNo}
+            />
+          </div>
+          <div className="w-[47.9%] min-w-[265px] min-[600px]:min-w-[320px] min-[900px]:min-w-[231px] lg:min-w-[231px]">
+            <h4 className="text-end text-base min-[600px]:text-lg xl:text-xl text-primary_2 font-semibold  pb-3">
+              See All
+            </h4>
+            <CreditCard
+              isBlue={false}
+              cardHolder={cardDetails.cardHolder}
+              validThru={cardDetails.validThru}
+              balance={cardDetails.balance}
+              cardNo={cardDetails.cardNo}
+            />
+          </div>
         </div>
-        <div className="w-[31.5%]">
-          <h4 className="text-end text-primary_2 font-semibold  pb-3">
-            See All
-          </h4>
-          <CreditCard
-            isBlue={false}
-            cardHolder={cardDetails.cardHolder}
-            validThru={cardDetails.validThru}
-            balance={cardDetails.balance}
-            cardNo={cardDetails.cardNo}
-          />
-        </div>
-        <div className="w-[31.5%]">
-          <p className="text text-primary_2 font-semibold text-lg xl:text-xl pb-2">
-            Recent Transaction
+        {/* Recent Transactions  */}
+        <div className="w-full mx-auto   min-[900px]:w-[31.5%] min-w-[265px] lg:min-w-[231px] pt-3 min-[900px]:pt-0">
+          <p className="text text-primary_2 font-semibold text-base min-[600px]:text-lg xl:text-xl pb-2">
+            Recent Transactions
           </p>
           <RecentTransaction />
         </div>
       </section>
       <section className="w-full pt-4">
-        <div className="flex justify-between w-full">
+        <div className="flex flex-col space-y-6 min-[900px]:space-y-0 min-[900px]:flex-row justify-between w-full">
           <WeeklyActivity />
           <ExpenseStatistics />
         </div>
       </section>
-      <section className="w-full pt-6 flex justify-between">
-        <div>
-          <h4 className="text-primary_2 font-semibold text-lg xl:text-xl pb-2">
+      <section className="w-full pt-6 flex flex-col min-[760px]:flex-row justify-between">
+        <div className="w-full min-[760px]:w-[40%]">
+          <h4 className="text-primary_2 font-semibold text-base min-[600px]:text-lg xl:text-xl pb-2">
             Quick Transfer
           </h4>
           <QuickTransfer />
         </div>
-        <div>
-          <h4 className="text-primary_2 font-semibold text-lg xl:text-xl pb-2">
+        <div className="w-full min-[760px]:w-[57%] pt-4 min-[760px]:pt-0">
+          <h4 className="text-primary_2 font-semibold text-base min-[600px]:text-lg xl:text-xl pb-2">
             Balance History
           </h4>
           <SplineChart />

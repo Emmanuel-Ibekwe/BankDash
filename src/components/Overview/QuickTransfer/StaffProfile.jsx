@@ -8,15 +8,15 @@ export default function StaffProfile({ pic, name, role }) {
         "bg-[#DFE5EE] border border-text_2 rounded-xl"}`}
       onClick={() => setIsSelected(prev => !prev)}
     >
-      <div className="mx-auto lg:w-[50px] xl:w-[70px] lg:w-[50px] xl:h-[70px] mb-1">
+      <div className="mx-auto w-[50px] xl:w-[70px] w-[50px] xl:h-[70px] mb-1">
         <img src={pic} alt="" className="w-full h-full" />
       </div>
       <div
-        className={`text-center lg:text-xs xl:text-base ${isSelected &&
+        className={`text-center text-xs xl:text-base ${isSelected &&
           "font-bold"}`}
       >
         <p>{name}</p>
-        <p className="lg:text-xs xl:text-sm text-text_2">{role}</p>
+        <p className="text-xs xl:text-sm text-text_2">{role}</p>
       </div>
     </div>
   );

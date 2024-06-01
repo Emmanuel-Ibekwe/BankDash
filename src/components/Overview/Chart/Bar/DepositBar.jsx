@@ -10,7 +10,7 @@ export default function DepositBar({ deposit, maxValue, day }) {
   return (
     <div
       id={`${day}-d`}
-      className={`w-2.5 xl:w-[15px]  bg-[#1814F3] rounded-b-[30px] rounded-t-[30px]`}
+      className={`w-[7px] min-[900px]:w-2.5 xl:w-[15px]  bg-[#1814F3] rounded-b-[30px] rounded-t-[30px]`}
     ></div>
   );
 }
