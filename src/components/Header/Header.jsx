@@ -5,7 +5,7 @@ import searchIcon from "../../assets/search_icon.png";
 import profilePic from "../../assets/profile-pic.png";
 import ToggleButton from "./../../svg/ToggleButton";
 
-export default function Header({ onSetIsNavClosed, isNavClosed }) {
+export default function Header({ onSetIsNavClosed, isNavClosed, title }) {
   const [showBorder, setShowBorder] = useState(false);
   const inputFocushandler = () => {
     setShowBorder(true);
@@ -18,7 +18,7 @@ export default function Header({ onSetIsNavClosed, isNavClosed }) {
     <>
       <div className="hidden lg:block lg:body-width-lg xl:body-width-xl px-5 lg:px-[2%] fixed top-0 lg:left-[230px] xl:left-60 bg-white box-border z-50">
         <div className="w-full h-[90px] flex pt-6 pb-5 lg:space-x-44 xl:space-x-96 items-center ">
-          <h1 className="font-semibold text-primary_2 text-2xl">Overview</h1>
+          <h1 className="font-semibold text-primary_2 text-2xl">{title}</h1>
           <div className="flex justify-between w-full items-center">
             <div
               className={`flex lg:h-10 xl:h-[50px] overflow-hidden box-border ${

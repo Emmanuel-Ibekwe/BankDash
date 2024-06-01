@@ -8,7 +8,11 @@ export default function Home() {
   const [isNavClosed, setIsNavClosed] = useOutletContext();
   return (
     <div className="w-full lg:body-width-lg xl:body-width-xl static lg:absolute lg:left-[230px] xl:left-60">
-      <Header isNavClosed={isNavClosed} onSetIsNavClosed={setIsNavClosed} />
+      <Header
+        isNavClosed={isNavClosed}
+        onSetIsNavClosed={setIsNavClosed}
+        title="Overview"
+      />
       <Overview />
     </div>
   );
