@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { range } from "./../utils/transactions";
+import { range } from "../utils/pagination";
 
 export const usePagination = ({
   totalCount,
