@@ -12,8 +12,16 @@ import CardIcon from "./Card";
 import PaypalIcon from "./Paypal";
 import TelegramIcon from "./Telegram";
 import CloseIcon from "./Close";
+import IncomeIcon from "./Income";
+import BalanceIcon from "./Balance";
+import ExpenseIcon from "./Expense";
+import PiggyBankIcon from "./PiggyBank";
 
 export {
+  IncomeIcon,
+  BalanceIcon,
+  ExpenseIcon,
+  PiggyBankIcon,
   CloseIcon,
   CreditCardIcon,
   TelegramIcon,
