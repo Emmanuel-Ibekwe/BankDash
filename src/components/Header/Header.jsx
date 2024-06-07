@@ -63,7 +63,7 @@ export default function Header({ onSetIsNavClosed, isNavClosed, title }) {
           >
             <ToggleButton />
           </div>
-          <h2 className="font-semibold text-xl text-primary_2">Overview</h2>
+          <h2 className="font-semibold text-xl text-primary_2">{title}</h2>
           <div className="w-10 h-10">
             <img src={profilePic} alt="" className="w-full" />
           </div>
