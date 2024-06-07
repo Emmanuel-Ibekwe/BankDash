@@ -27,7 +27,7 @@ export default function Transaction({
         )}
       </div>
       <div className="grow hidden min-[375px]:block min-[900px]:hidden xl:block">
-        <p className="text-[#232323] font-medium text-[13px] min-[600px]:text-[13.5px] min-[720px]:text-base">
+        <p className="text-text_3 font-medium text-[13px] min-[600px]:text-[13.5px] min-[720px]:text-base">
           {title}
         </p>
         <p className="text-[#718EBF] text-[12px] min-[600px]:text-[13px] min-[720px]:text-[15px]">
@@ -35,7 +35,7 @@ export default function Transaction({
         </p>
       </div>
       <div className="grow block min-[375px]:hidden min-[900px]:block xl:hidden">
-        <p className="text-[#232323] font-medium text-[13px] xl:text-base">
+        <p className="text-text_3 font-medium text-[13px] xl:text-base">
           {title.length > 12 ? `${title.substring(0, 9)}...` : title}
         </p>
         <p className="text-[#718EBF] text-[12px] xl:text-[15px]">{date}</p>
