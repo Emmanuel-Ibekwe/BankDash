@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import notificationIcon from "../../assets/notification-icon.png";
 import settingsIcon from "../../assets/settings-icon-2.png";
 import searchIcon from "../../assets/search_icon.png";
@@ -6,12 +6,29 @@ import profilePic from "../../assets/profile-pic.png";
 import ToggleButton from "./../../svg/ToggleButton";
 
 export default function Header({ onSetIsNavClosed, isNavClosed, title }) {
+  const inputRef = useRef(null);
+  const inputRef2 = useRef(null);
   const [showBorder, setShowBorder] = useState(false);
+  const [showSearchIcon, setShowSearchIcon] = useState(true);
   const inputFocushandler = () => {
     setShowBorder(true);
+    setShowSearchIcon(false);
   };
   const inputBlurHandler = () => {
     setShowBorder(false);
+    setShowSearchIcon(true);
+  };
+
+  const handleSearchIcon = () => {
+    setShowSearchIcon(false);
+
+    inputRef.current.focus();
+  };
+
+  const handleSearchIcon2 = () => {
+    setShowSearchIcon(false);
+
+    inputRef2.current.focus();
   };
 
   return (
@@ -19,23 +36,30 @@ export default function Header({ onSetIsNavClosed, isNavClosed, title }) {
       <div className="hidden lg:block lg:body-width-lg xl:body-width-xl px-5 lg:px-[2%] fixed top-0 lg:left-[230px] xl:left-60 bg-white box-border z-50">
         <div className="w-full h-[90px] flex pt-6 pb-5 lg:space-x-44 xl:space-x-96 items-center ">
           <h1 className="font-semibold text-primary_2 text-2xl">{title}</h1>
-          <div className="flex justify-between w-full items-center">
+          <div className="flex justify-between w-full items-center cursor-pointer">
             <div
-              className={`flex lg:h-10 xl:h-[50px] overflow-hidden box-border ${
+              className={`flex  lg:h-10 xl:h-[50px] overflow-hidden box-border ${
                 showBorder
                   ? "border border-primary_2 rounded-full transition duration-300"
                   : ""
               }`}
             >
-              <div className="rounded-l-full lg:h-10 xl:h-[50px] flex items-center justify-center bg-background_1 pr-4 pl-6 ">
-                <img src={searchIcon} alt="" className="translate-y-0.5" />
-              </div>
+              {showSearchIcon && (
+                <div
+                  onClick={handleSearchIcon}
+                  className=" block rounded-l-full lg:h-10 xl:h-[50px] flex items-center justify-center bg-background_1 pr-4 pl-6 "
+                >
+                  <img src={searchIcon} alt="" className="translate-y-0.5" />
+                </div>
+              )}
               <input
                 type="text"
                 placeholder="Search for something"
-                className="focus:outline-none w-64 lg:h-10 xl:h-[50px]  bg-background_1 rounded-r-full"
+                className={`${!showSearchIcon &&
+                  "!px-8 !w-[312px] rounded-full"} focus:outline-none focus:px-8 focus:w-[312px] w-64 lg:h-10 xl:h-[50px]  bg-background_1 rounded-r-full`}
                 onFocus={inputFocushandler}
                 onBlur={inputBlurHandler}
+                ref={inputRef}
               />
             </div>
             <div className="lg:w-10 xl:w-[50px] lg:h-10 xl:h-[50px] bg-background_1 flex items-center justify-center rounded-full">
@@ -70,21 +94,28 @@ export default function Header({ onSetIsNavClosed, isNavClosed, title }) {
         </div>
         <div className="flex justify-center items-center w-full pt-4">
           <div
-            className={`flex h-10 xl:h-[50px] w-full max-w-[424px] overflow-hidden box-border justify-center items-center ${
+            className={`cursor-pointer flex h-10 xl:h-[50px] w-full max-w-[424px] overflow-hidden box-border justify-center items-center ${
               showBorder
                 ? "border border-primary_2 rounded-full transition duration-300"
                 : ""
             }`}
           >
-            <div className="rounded-l-full h-10 xl:h-[50px] flex items-center justify-center bg-background_1 pr-4 pl-6 ">
-              <img src={searchIcon} alt="" className="translate-y-0.5" />
-            </div>
+            {showSearchIcon && (
+              <div
+                onClick={handleSearchIcon2}
+                className="rounded-l-full h-10 xl:h-[50px] flex items-center justify-center bg-background_1 pr-4 pl-6 "
+              >
+                <img src={searchIcon} alt="" className="translate-y-0.5" />
+              </div>
+            )}
             <input
               type="text"
               placeholder="Search for something"
-              className="focus:outline-none w-full h-10 xl:h-[50px]  bg-background_1 rounded-r-full"
+              className={`${!showSearchIcon &&
+                "!px-8 rounded-full"} focus:outline-none w-full h-10 xl:h-[50px]  bg-background_1 rounded-r-full`}
               onFocus={inputFocushandler}
               onBlur={inputBlurHandler}
+              ref={inputRef2}
             />
           </div>
         </div>
