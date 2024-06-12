@@ -23,6 +23,8 @@ export default function Overview() {
               My Cards
             </h2>
             <CreditCard
+              upperGradient="bg-gradient-to-br from-blue_2 to-blue_1"
+              lowerGradient="bg-[#4C49ED]"
               isBlue={true}
               cardHolder={cardDetails.cardHolder}
               validThru={cardDetails.validThru}
@@ -35,6 +37,8 @@ export default function Overview() {
               See All
             </h4>
             <CreditCard
+              upperGradient="bg-white"
+              lowerGradient="bg-white border-t border-[#DFEAF2]"
               isBlue={false}
               cardHolder={cardDetails.cardHolder}
               validThru={cardDetails.validThru}
