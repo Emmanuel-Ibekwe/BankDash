@@ -9,13 +9,13 @@ export default function CreditCard({
   cardHolder,
   validThru,
   balance,
-  cardNo
+  cardNo,
+  upperGradient,
+  lowerGradient
 }) {
   return (
     <div
-      className={`${
-        isBlue ? "bg-gradient-to-br from-blue_2 to-blue_1" : "bg-white "
-      } w-full min-w-[265px] min-[600px]:min-w-[320px] min-[900px]:min-w-[231px]  h-[170px] min-[600px]:h-[230px] min-[900px]:h-[190px] lg:h-[170px] xl:h-[230px] rounded-3xl border border-[#DFEAF2]   text-white overflow-hidden 
+      className={`${upperGradient} w-full min-w-[265px] min-[600px]:min-w-[320px] min-[900px]:min-w-[231px]  h-[170px] min-[600px]:h-[230px] min-[900px]:h-[190px] lg:h-[170px] xl:h-[230px] rounded-3xl border border-[#DFEAF2]   text-white overflow-hidden 
       `}
     >
       <div className="flex flex-col space-y-4 min-[600px]:space-y-10 min-[900px]:space-y-4 xl:space-y-10 box-border pb-3 min-[600px]:pb-6 min-[900px]:pb-4 lg:pb-3 xl:pb-6 px-4 pt-4 xl:pt-6">
@@ -70,9 +70,7 @@ export default function CreditCard({
         </div>
       </div>
       <div
-        className={`flex justify-between items-center w-full pt-3 min-[600px]:pt-4  min-[900px]:pt-3 xl:pt-4 pb-6 px-5 px-3 xl:px-5 ${
-          isBlue ? "bg-[#4C49ED]" : "bg-white border-t border-[#DFEAF2]"
-        }`}
+        className={`flex justify-between items-center w-full pt-3 min-[600px]:pt-4  min-[900px]:pt-3.5 xl:pt-4 pb-6 px-5 px-3 xl:px-5 ${lowerGradient}`}
       >
         <p
           className={`${!isBlue &&
