@@ -34,8 +34,10 @@ export default function Header({ onSetIsNavClosed, isNavClosed, title }) {
   return (
     <>
       <div className="hidden lg:block lg:body-width-lg xl:body-width-xl px-5 lg:px-[2%] fixed top-0 lg:left-[230px] xl:left-60 bg-white box-border z-50">
-        <div className="w-full h-[90px] flex pt-6 pb-5 lg:space-x-44 xl:space-x-96 items-center ">
-          <h1 className="font-semibold text-primary_2 text-2xl">{title}</h1>
+        <div className="w-full h-[90px] flex pt-6 pb-5 space-x-28 min-[1070px]:space-x-40 xl:space-x-96 items-center ">
+          <h1 className="font-semibold text-primary_2 text-2xl w-[40%] min-[1070px]:w-[30%]">
+            {title}
+          </h1>
           <div className="flex justify-between w-full items-center cursor-pointer">
             <div
               className={`flex  lg:h-10 xl:h-[50px] overflow-hidden box-border ${
@@ -82,7 +84,6 @@ export default function Header({ onSetIsNavClosed, isNavClosed, title }) {
             className="cursor-pointer"
             onClick={() => {
               onSetIsNavClosed(true);
-              console.log("open nav", isNavClosed);
             }}
           >
             <ToggleButton />
