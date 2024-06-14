@@ -13,13 +13,13 @@ import PaypalIcon from "./Paypal";
 import TelegramIcon from "./Telegram";
 import CloseIcon from "./Close";
 import IncomeIcon from "./Income";
-import BalanceIcon from "./Balance";
+import MoneyBagIcon from "./MoneyBagIcon";
 import ExpenseIcon from "./Expense";
 import PiggyBankIcon from "./PiggyBank";
 
 export {
   IncomeIcon,
-  BalanceIcon,
+  MoneyBagIcon,
   ExpenseIcon,
   PiggyBankIcon,
   CloseIcon,
