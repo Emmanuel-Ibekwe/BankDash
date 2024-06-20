@@ -7,11 +7,11 @@ import {
   CreditCardIcon,
   LoanIcon,
   ServiceIcon,
-  EconometricsIcon,
-  SettingIcon
+  EconometricsIcon
 } from "../../svg";
 import BankDashIcon from "../../assets/bankdash_icon.png";
 import MobileNav from "./MobileNav";
+import SettingsIcon from "../../svg/SettingsIcon";
 
 export default function MainNavigation({ isNavClosed, onSetIsNavClosed }) {
   return (
@@ -215,8 +215,10 @@ export default function MainNavigation({ isNavClosed, onSetIsNavClosed }) {
                   )}
                   <p className="flex pl-8 space-x-6 items-center">
                     <span>
-                      <SettingIcon
-                        fillColor={isActive ? "#2D60FF" : "#b1b1b1"}
+                      <SettingsIcon
+                        className={
+                          isActive ? "fill-[#2D60FF]" : "fill-[#b1b1b1]"
+                        }
                       />
                     </span>
                     <span

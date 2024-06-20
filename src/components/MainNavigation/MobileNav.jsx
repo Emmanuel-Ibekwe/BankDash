@@ -13,6 +13,7 @@ import {
 } from "../../svg";
 import BankDashIcon from "../../assets/bankdash_icon.png";
 import CloseIcon from "./../../svg/Close";
+import SettingsIcon from "../../svg/SettingsIcon";
 
 export default function MobileNav({ isNavClosed, onSetIsNavClosed }) {
   return (
@@ -33,7 +34,7 @@ export default function MobileNav({ isNavClosed, onSetIsNavClosed }) {
               <CloseIcon className="fill-[#343C6A]" />
             </div>
           </header>
-          <ul className="flex flex-col justify-between bg-white space-y-8 lg:space-y-0">
+          <ul className="flex flex-col justify-between bg-white space-y-4 lg:space-y-0">
             <li onClick={() => onSetIsNavClosed(false)}>
               <NavLink to="" className="w-full">
                 {({ isActive }) => (
@@ -237,8 +238,8 @@ export default function MobileNav({ isNavClosed, onSetIsNavClosed }) {
                     ></div>
                     <p className="flex pl-8 space-x-6 items-center">
                       <span>
-                        <SettingIcon
-                          fillColor={isActive ? "#2D60FF" : "#b1b1b1"}
+                        <SettingsIcon
+                          className={isActive ? "#2D60FF" : "#b1b1b1"}
                         />
                       </span>
                       <span
