@@ -48,7 +48,7 @@ body {
   }
 
   .scrollbar1::-webkit-scrollbar-track {
-    background: white;
+    background: #f5f7fa;
   }
 
   .scrollbar1::-webkit-scrollbar-thumb {
@@ -97,6 +97,16 @@ body {
     .slice-inner-div {
       font-size: 12px;
     }
+  }
+
+  .clamp1 {
+    width: clamp(18px, 2vw, 30px);
+    height: clamp(18px, 2vw, 30px);
+  }
+
+  .clamp2 {
+    width: clamp(12px, 1vw, 15px);
+    height: clamp(12px, 1vw, 15px);
   }
   /* 
   .apexcharts-xaxis {
