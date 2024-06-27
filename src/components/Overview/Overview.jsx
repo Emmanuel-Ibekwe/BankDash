@@ -14,7 +14,7 @@ export default function Overview() {
   };
 
   return (
-    <div className="w-full box-border pt-6 mt-[140px] lg:mt-0 mb-[1000px] z-50 lg:pt-[110px] xl:pt-[120px] px-5 lg:px-[2.5%] xl:px-[2%] :bg-background_1 pb-8 ">
+    <div className="w-full box-border pt-6 mt-[140px] lg:mt-0 z-50 lg:pt-[110px] xl:pt-[120px] px-5 lg:px-[2.5%] xl:px-[2%] :bg-background_1 pb-8 ">
       <section className=" flex flex-col min-[900px]:flex-row min-[900px]:space-x-[2.75%] lg:justify-between pb-2 w-full box-border ">
         {/* Credit Card Section */}
         <div className="pb-1 flex space-x-5 min-[720px]:justify-between w-full min-[900px]:w-[65.75%] scrollbar1 overflow-x-scroll min-[720px]:overflow-x-auto">
