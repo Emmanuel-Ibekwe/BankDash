@@ -1,17 +1,12 @@
 import { useEffect, useState } from "react";
-import { findAngles } from "./../../../utils/pie-chart";
-
-const getAngleInRad = x => {
-  let rad = (x * Math.PI) / 180;
-  return parseFloat(rad.toFixed(2));
-};
+import { findAngles, getAngleInRad } from "./../../../utils/pie-chart";
 
 export default function PieChart() {
   const colors = ["#343C6A", "#FC7900", "#1814F3", "#FA00FF"];
   const loans = [
     {
-      length: 200,
-      amount: 30,
+      length: 100,
+      amount: 300,
       title: "Entertainment"
     },
     {
@@ -66,30 +61,30 @@ export default function PieChart() {
       const chart = document.getElementById("pie-chart");
       const slice = document.createElement("div");
       const sliceContainer = document.createElement("div");
-      const sliceInnerDiv = document.createElement("div");
-      sliceInnerDiv.classList.add("slice-inner-div");
-      const slicePercentParagraph = document.createElement("p");
-      slicePercentParagraph.innerText = `${(angle * 100) / 360}%`;
-      // slicePercentParagraph.style.transform = `rotate(-${rotate}deg)`;
+      // const sliceInnerDiv = document.createElement("div");
+      // sliceInnerDiv.classList.add("slice-inner-div");
+      // const slicePercentParagraph = document.createElement("p");
+      // slicePercentParagraph.innerText = `${((angle * 100) / 360).toFixed(0)}%`;
+      // // slicePercentParagraph.style.transform = `rotate(-${rotate}deg)`;
 
-      const sliceTitleParagraph = document.createElement("p");
-      // sliceTitleParagraph.innerText = `${((angle / 360) * 100).toFixed()}%`;
-      sliceTitleParagraph.innerText = id;
+      // const sliceTitleParagraph = document.createElement("p");
+      // // sliceTitleParagraph.innerText = `${((angle / 360) * 100).toFixed()}%`;
+      // sliceTitleParagraph.innerText = id;
       slice.id = id;
 
       sliceContainer.style.width = `${sliceConRadius}px`;
       sliceContainer.style.height = `${sliceConRadius}px`;
 
-      sliceInnerDiv.appendChild(slicePercentParagraph);
+      // sliceInnerDiv.appendChild(slicePercentParagraph);
       // sliceInnerDiv.appendChild(sliceTitleParagraph);
-      sliceInnerDiv.style.left = `${(radius / 4) *
-        Math.sin(getAngleInRad(angle / 2)) +
-        radius / 2}px`;
-      slice.appendChild(sliceInnerDiv);
-      sliceInnerDiv.style.top = `${radius / 2 -
-        (radius / 4) * Math.cos(getAngleInRad(angle / 2))}px`;
-      sliceInnerDiv.style.transform = `translate(-50%, -50%)`;
-      sliceInnerDiv.style.transform = `translate(-50%, -50%)rotate(-${rotate}deg)`;
+      // sliceInnerDiv.style.left = `${(radius / 4) *
+      //   Math.sin(getAngleInRad(angle / 2)) +
+      //   radius / 2}px`;
+      // slice.appendChild(sliceInnerDiv);
+      // sliceInnerDiv.style.top = `${radius / 2 -
+      //   (radius / 4) * Math.cos(getAngleInRad(angle / 2))}px`;
+      // sliceInnerDiv.style.transform = `translate(-50%, -50%)`;
+      // sliceInnerDiv.style.transform = `translate(-50%, -50%)rotate(-${rotate}deg)`;
 
       slice.style.width = `${radius}px`;
       slice.style.height = `${radius}px`;
