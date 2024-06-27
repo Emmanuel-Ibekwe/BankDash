@@ -72,7 +72,7 @@ export default function BankServicesItem({ service }) {
       <div className="w-[34%] min-[425px]:w-[30%] min-[775px]:w-[17.58%] text-blue_3">
         <button
           type="button"
-          className="text-xs xl:text-[15px] w-[90px] min-[425px]:w-[120px] xl:w-[150px] h-[30px] xl:h-[35px] border-none min-[775px]:border border-blue_3 hover:border-text_2 hover:text-text_2 px-0 min-[425]:px-4  rounded-full"
+          className="text-xs xl:text-[15px] w-[90px] min-[425px]:w-[120px] xl:w-[150px] h-[30px] xl:h-[35px] border-none min-[775px]:border border-blue_3 hover:border-text_2 hover:text-text_2 px-0 min-[425px]:px-4  rounded-full"
         >
           View Details
         </button>
