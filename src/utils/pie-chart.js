@@ -7,3 +7,8 @@ export const findAngles = arr => {
     return { ...el, angle: angles[i], percent: percentages[i] };
   });
 };
+
+export const getAngleInRad = x => {
+  let rad = (x * Math.PI) / 180;
+  return parseFloat(rad.toFixed(2));
+};
