@@ -34,7 +34,7 @@ export default function MobileNav({ isNavClosed, onSetIsNavClosed }) {
               <CloseIcon className="fill-[#343C6A]" />
             </div>
           </header>
-          <ul className="flex flex-col justify-between bg-white space-y-4 lg:space-y-0">
+          <ul className="flex flex-col justify-between bg-white space-y-4 lg:space-y-0 font-medium">
             <li onClick={() => onSetIsNavClosed(false)}>
               <NavLink to="" className="w-full">
                 {({ isActive }) => (
@@ -204,7 +204,7 @@ export default function MobileNav({ isNavClosed, onSetIsNavClosed }) {
                 )}
               </NavLink>
             </li>
-            <li onClick={() => onSetIsNavClosed(false)}>
+            {/* <li onClick={() => onSetIsNavClosed(false)}>
               <NavLink to="my-privileges" className="w-full">
                 {({ isActive }) => (
                   <div className="flex  ">
@@ -227,7 +227,7 @@ export default function MobileNav({ isNavClosed, onSetIsNavClosed }) {
                   </div>
                 )}
               </NavLink>
-            </li>
+            </li> */}
             <li onClick={() => onSetIsNavClosed(false)}>
               <NavLink to="settings" className="w-full">
                 {({ isActive }) => (
@@ -239,7 +239,9 @@ export default function MobileNav({ isNavClosed, onSetIsNavClosed }) {
                     <p className="flex pl-8 space-x-6 items-center">
                       <span>
                         <SettingsIcon
-                          className={isActive ? "#2D60FF" : "#b1b1b1"}
+                          className={
+                            isActive ? "fill-[#2D60FF]" : "fill-[#b1b1b1]"
+                          }
                         />
                       </span>
                       <span

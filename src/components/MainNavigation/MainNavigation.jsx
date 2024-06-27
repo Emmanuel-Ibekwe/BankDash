@@ -23,7 +23,7 @@ export default function MainNavigation({ isNavClosed, onSetIsNavClosed }) {
           </div>
           <h1 className="font-bold text-primary_2 text-2xl">BankDash.</h1>
         </header>
-        <ul className="flex flex-col justify-between bg-white space-y-0">
+        <ul className="flex flex-col justify-between bg-white space-y-0 font-medium">
           <li>
             <NavLink to="" className="w-full">
               {({ isActive }) => (
@@ -183,7 +183,7 @@ export default function MainNavigation({ isNavClosed, onSetIsNavClosed }) {
               )}
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="my-privileges" className="w-full">
               {({ isActive }) => (
                 <div className="flex h-12 ">
@@ -205,7 +205,7 @@ export default function MainNavigation({ isNavClosed, onSetIsNavClosed }) {
                 </div>
               )}
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink to="settings" className="w-full">
               {({ isActive }) => (
