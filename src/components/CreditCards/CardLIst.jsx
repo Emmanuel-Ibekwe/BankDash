@@ -31,7 +31,7 @@ export default function CardLIst() {
 
       <div className="w-full h-[210px] min-[375px]:h-[231px] xl:h-[290px] flex flex-col justify-between items-center">
         {cards.map((el, i) => (
-          <div className="bg-white w-full p-2 min-[375px]:p-3  xl:pr-6 rounded-2xl min-[820px]:rounded-3xl flex justify-between items-center">
+          <div className="bg-white w-full p-2 min-[375px]:p-3  xl:pr-6 rounded-2xl xl:rounded-3xl flex justify-between items-center">
             <div className="flex space-x-2.5 xl:space-x-4 items-center">
               <div
                 className={`w-[45px] xl:w-[60px] h-[45px] xl:h-[60px] rounded-xl xl:rounded-[20px] flex items-center justify-center ${
