@@ -1,7 +1,4 @@
 import MyInvestmentItem from "./MyInvestmentItem";
-import AppleLogo2 from "../../../svg/AppleLogo2";
-import GoogleLogo from "../../../svg/GoogleLogo";
-import TeslaLogo from "../../../svg/TeslaLogo";
 
 export default function MyInvestments() {
   const investments = [
