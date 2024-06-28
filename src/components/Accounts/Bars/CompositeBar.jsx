@@ -9,7 +9,7 @@ export default function CompositeBar({ day, maxValue, credit, debit }) {
     const creditId = document.getElementById(`credit-${day}`);
     const creditPercentHeight = (credit / maxValue) * 100;
     creditId.style.height = `${creditPercentHeight}%`;
-  }, []);
+  }, [day, maxValue, credit, debit]);
   return (
     <div className="flex flex-col space-y-2 h-full">
       <div className="flex justify-between items-end w-[25px] min-[600px]:w-12 xl:w-[70px] h-full item">
