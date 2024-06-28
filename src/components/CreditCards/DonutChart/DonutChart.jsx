@@ -35,7 +35,7 @@ export default function DonutChart({ colors }) {
     if (screenWidth >= 1280) {
       lengths = [180, 120, 130, 150];
     } else {
-      lengths = [170, 110, 120, 140];
+      lengths = [160, 100, 110, 130];
     }
 
     console.log("loans: ", findAngles(loans));
@@ -142,7 +142,7 @@ export default function DonutChart({ colors }) {
   return (
     <div
       id="donut-chart"
-      className=" w-[280px] min-[900px]:w-[180px] xl:w-[280px] h-[170px] min-[900px]:h-[170px] xl:h-[188px] relative"
+      className=" w-[280px] min-[900px]:w-[180px] xl:w-[280px] h-[160px] min-[900px]:h-[170px] xl:h-[188px] relative"
     ></div>
   );
 }
