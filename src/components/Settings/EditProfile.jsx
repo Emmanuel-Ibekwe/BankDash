@@ -84,7 +84,7 @@ export default function EditProfile() {
       return;
     }
 
-    if (pic.size > 1024 * 5) {
+    if (pic.size > 1024 * 1024 * 5) {
       setImgError(`image is too large. Maximum 5mb.`);
       return;
     }
@@ -123,7 +123,7 @@ export default function EditProfile() {
               accept="image/png,image/jpeg,image/webp"
             />
           </div>
-          {imgError && isSubmit && (
+          {imgError && (
             <p className="text-red-400 text-xs min-[670px]:text-[11px] xl:text-xs pt-0.5">
               {imgError}
             </p>
