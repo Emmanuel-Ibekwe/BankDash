@@ -11,16 +11,16 @@ export default function Transaction({
     <div className=" flex space-x-5 min-[900px]:space-x-2 xl:space-x-3 items-center w-full">
       <div
         className={`${
-          transaction_icon == "card"
+          transaction_icon === "card"
             ? "bg-[#FFF5D9]"
-            : transaction_icon == "paypal"
+            : transaction_icon === "paypal"
             ? "bg-[#E7EDFF]"
             : "bg-[#DCFAF8]"
         } w-14 min-[900px]:w-10 xl:w-14 h-14 min-[900px]:h-10 xl:h-14 rounded-full flex items-center justify-center`}
       >
-        {transaction_icon == "card" ? (
+        {transaction_icon === "card" ? (
           <CardIcon className="h-[28px] min-[900px]:h-5 xl:h-[28px] w-[28px] min-[900px]:w-5 xl:w-[28px]" />
-        ) : transaction_icon == "paypal" ? (
+        ) : transaction_icon === "paypal" ? (
           <PaypalIcon className="w-[28px] min-[900px]:h-5 xl:h-[28px]  w-[28px] min-[900px]:w-5 xl:w-[28px]" />
         ) : (
           <CoinIcon className="h-[28px] min-[900px]:h-5 xl:h-[28px] w-[28px] min-[900px]:w-5 xl:w-[28px]" />
