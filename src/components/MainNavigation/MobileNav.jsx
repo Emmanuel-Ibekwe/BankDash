@@ -44,7 +44,9 @@ export default function MobileNav({ isNavClosed, onSetIsNavClosed }) {
                     <p className="flex pl-8 space-x-6 items-center">
                       <span className="justify-self-start">
                         <HomeIcon
-                          fillColor={`${isActive ? "#2D60FF" : "#b1b1b1"}`}
+                          className={`${
+                            isActive ? "fill-[#2D60FF]" : "fill-[#b1b1b1]"
+                          } w-5 min-[600px]:w-[25px] h-5 min-[600px]:h-[25px]`}
                         />
                       </span>
                       <span
@@ -68,7 +70,9 @@ export default function MobileNav({ isNavClosed, onSetIsNavClosed }) {
                     <p className="flex pl-8 space-x-6 items-center">
                       <span>
                         <TransferIcon
-                          fillColor={`${isActive ? "#2D60FF" : "#b1b1b1"}`}
+                          className={`${
+                            isActive ? "fill-[#2D60FF]" : "fill-[#b1b1b1]"
+                          } w-5 min-[600px]:w-[25px] h-5 min-[600px]:h-[25px]`}
                         />
                       </span>{" "}
                       <span
@@ -92,7 +96,9 @@ export default function MobileNav({ isNavClosed, onSetIsNavClosed }) {
                     <p className="flex pl-8 space-x-6 items-center">
                       <span>
                         <UserIcon
-                          fillColor={`${isActive ? "#2D60FF" : "#b1b1b1"}`}
+                          className={`${
+                            isActive ? "fill-[#2D60FF]" : "fill-[#b1b1b1]"
+                          } w-5 min-[600px]:w-[25px] h-5 min-[600px]:h-[25px]`}
                         />
                       </span>
                       <span
@@ -116,7 +122,9 @@ export default function MobileNav({ isNavClosed, onSetIsNavClosed }) {
                     <p className="flex pl-8 space-x-6 items-center">
                       <span>
                         <InvestmentIcon
-                          fillColor={`${isActive ? "#2D60FF" : "#b1b1b1"}`}
+                          className={`${
+                            isActive ? "fill-[#2D60FF]" : "fill-[#b1b1b1]"
+                          } w-5 min-[600px]:w-[25px] h-5 min-[600px]:h-[25px]`}
                         />
                       </span>
                       <span
@@ -140,7 +148,9 @@ export default function MobileNav({ isNavClosed, onSetIsNavClosed }) {
                     <p className="flex pl-8 space-x-6 w-full items-center">
                       <span>
                         <CreditCardIcon
-                          fillColor={isActive ? "#2D60FF" : "#b1b1b1"}
+                          className={`${
+                            isActive ? "fill-[#2D60FF]" : "fill-[#b1b1b1]"
+                          } w-5 min-[600px]:w-[25px] h-5 min-[600px]:h-[25px]`}
                         />
                       </span>
                       <span
@@ -164,7 +174,9 @@ export default function MobileNav({ isNavClosed, onSetIsNavClosed }) {
                     <p className="flex pl-8 space-x-6 items-center">
                       <span className="justify-self-start">
                         <LoanIcon
-                          fillColor={isActive ? "#2D60FF" : "#b1b1b1"}
+                          className={`${
+                            isActive ? "fill-[#2D60FF]" : "fill-[#b1b1b1]"
+                          } w-5 min-[600px]:w-[25px] h-5 min-[600px]:h-[25px]`}
                         />
                       </span>{" "}
                       <span
@@ -188,7 +200,9 @@ export default function MobileNav({ isNavClosed, onSetIsNavClosed }) {
                     <p className="flex pl-8 space-x-6 items-center">
                       <span>
                         <ServiceIcon
-                          fillColor={isActive ? "#2D60FF" : "#b1b1b1"}
+                          className={`${
+                            isActive ? "fill-[#2D60FF]" : "fill-[#b1b1b1]"
+                          } w-5 min-[600px]:w-[25px] h-5 min-[600px]:h-[25px]`}
                         />
                       </span>
                       <span
@@ -212,7 +226,7 @@ export default function MobileNav({ isNavClosed, onSetIsNavClosed }) {
                     <p className="flex pl-8 space-x-6 items-center">
                       <span>
                         <EconometricsIcon
-                          fillColor={isActive ? "#2D60FF" : "#b1b1b1"}
+                          className={`${isActive ? "fill-[#2D60FF]" : "fill-[#b1b1b1]"}`}
                         />
                       </span>
                       <span
@@ -236,9 +250,9 @@ export default function MobileNav({ isNavClosed, onSetIsNavClosed }) {
                     <p className="flex pl-8 space-x-6 items-center">
                       <span>
                         <SettingsIcon
-                          className={
+                          className={`${
                             isActive ? "fill-[#2D60FF]" : "fill-[#b1b1b1]"
-                          }
+                          } w-5 min-[600px]:w-[25px] h-5 min-[600px]:h-[25px]`}
                         />
                       </span>
                       <span
