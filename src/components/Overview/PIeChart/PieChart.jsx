@@ -1,35 +1,36 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { findAngles, getAngleInRad } from "./../../../utils/pie-chart";
 
 export default function PieChart() {
-  const colors = ["#343C6A", "#FC7900", "#1814F3", "#FA00FF"];
-  const loans = [
-    {
-      length: 100,
-      amount: 300,
-      title: "Entertainment"
-    },
-    {
-      length: 210,
-      amount: 15,
-      title: "Bill Expense"
-    },
-    {
-      length: 230,
-      amount: 35,
-      title: "Investment"
-    },
-    {
-      length: 250,
-      amount: 20,
-      title: "Others"
-    }
-  ];
-
   // const [rotationAngle, setRotationAngle] = useState(56);
   // let angle = 34;
-  let rotationAngle = 0;
   useEffect(() => {
+    let rotationAngle = 0;
+
+    const colors = ["#343C6A", "#FC7900", "#1814F3", "#FA00FF"];
+
+    const loans = [
+      {
+        length: 100,
+        amount: 300,
+        title: "Entertainment"
+      },
+      {
+        length: 210,
+        amount: 15,
+        title: "Bill Expense"
+      },
+      {
+        length: 230,
+        amount: 35,
+        title: "Investment"
+      },
+      {
+        length: 250,
+        amount: 20,
+        title: "Others"
+      }
+    ];
     let lengths;
     const screenWidth = window.innerWidth;
     if (screenWidth >= 1280) {
@@ -53,10 +54,7 @@ export default function PieChart() {
       let oppYPosition;
       let oppXPosition;
       let oppLength;
-      let offset = 5;
-      let offsetY;
-      let offsetX;
-      let sliceConLength, sliceConXPosition, sliceConYPosition;
+
       let sliceConRadius = radius + 20;
       const chart = document.getElementById("pie-chart");
       const slice = document.createElement("div");
