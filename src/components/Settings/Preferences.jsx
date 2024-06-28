@@ -1,5 +1,5 @@
 import timezonesFile from "../../timezones.json";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import DropdownIcon from "../../svg/DropdownIcon";
 
 export default function Preferences() {
@@ -18,13 +18,13 @@ export default function Preferences() {
   const handleSubmit = e => {
     e.preventDefault();
 
-    const data = {
-      currencyOption,
-      timezoneOption,
-      useDigitalCurrency,
-      receiveMerchantOrder,
-      receiveRecommendation
-    };
+    // const data = {
+    //   currencyOption,
+    //   timezoneOption,
+    //   useDigitalCurrency,
+    //   receiveMerchantOrder,
+    //   receiveRecommendation
+    // };
 
     setCurrencyOption("USD");
     setTimezoneOption("(UTC-12:00) International Date Line West");
