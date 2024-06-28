@@ -22,7 +22,9 @@ export default function Invoice({ time, title, amount }) {
         </div>
         <div className="">
           <p className="text-text_1">{capitalizeWords(title)}</p>
-          <p className="text-text_2 text-xs min-[600px]:text-[13.5px] min-[900px]:text-xs xl:text-[15px]">{time}</p>
+          <p className="text-text_2 text-xs min-[600px]:text-[13.5px] min-[900px]:text-xs xl:text-[15px]">
+            {time}
+          </p>
         </div>
       </div>
       <div className="text-text_2">${numberWithCommas(amount)}</div>
