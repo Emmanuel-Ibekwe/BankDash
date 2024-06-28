@@ -4,7 +4,6 @@ import carouselPic2 from "../../../assets/carousel_pic_2.png";
 import carouselPic3 from "../../../assets/carousel_pic_3.png";
 import { groupIntoThrees } from "../../../utils/quick-transfer";
 import StaffProfile from "./StaffProfile";
-import { set } from "jsonpointer";
 import { TelegramIcon } from "../../../svg";
 
 export default function QuickTransfer() {
@@ -12,7 +11,6 @@ export default function QuickTransfer() {
   const [btnId, setBtnId] = useState("");
   const [curSlide, setCurSlide] = useState(0);
   const [maxSlide, setMaxSlide] = useState(0);
-  const [outline, setOutline] = useState(false);
   const staff = [
     {
       name: "Livia Bator",
@@ -45,7 +43,7 @@ export default function QuickTransfer() {
       role: "Database Adminstrator"
     }
   ];
-  let nextSlide, prevSlide;
+
   useEffect(() => {
     const slides = document.querySelectorAll(".slide");
     setMaxSlide(+slides.length - 1);
@@ -59,7 +57,7 @@ export default function QuickTransfer() {
     goToSlide(curSlide);
     console.log("curSlide: ", curSlide);
     console.log("maxSlide: ", maxSlide);
-  }, [curSlide]);
+  }, [curSlide, maxSlide]);
 
   let timeoutId = null;
 
@@ -72,7 +70,7 @@ export default function QuickTransfer() {
         setCurSlide(prev => prev - 1);
       }
     } else if (id === "right") {
-      if (curSlide == maxSlide) {
+      if (curSlide === maxSlide) {
         console.log("maxSlide right");
         setCurSlide(0);
       } else {
@@ -161,8 +159,6 @@ export default function QuickTransfer() {
               type="number"
               className="text-text_2 text-xs xl:text-base w-full h-full bg-[#EDF1F7] pl-4 pr-[90px] xl:pr-[120px] rounded-full focus:outline-text_2"
               placeholder="Amount"
-              onFocus={() => setOutline(true)}
-              onBlur={() => setOutline(false)}
             />
             <div
               className={`cursor-pointer absolute right-0 top-0 box-border  bg-blue_3 flex w-[100px] xl:w-[125px] lg:h-10 xl:h-[50px] rounded-full p-2.5 items-center justify-around`}
