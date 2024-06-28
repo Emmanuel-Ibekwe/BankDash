@@ -1,11 +1,7 @@
 import moment from "moment";
 import { useRef, useState } from "react";
 import DropdownIcon from "./../../svg/DropdownIcon";
-import {
-  spaceDigits,
-  removeNonNumericAndWhitespace,
-  cardNumberFormatting
-} from "./../../utils/numberFormat";
+import { spaceDigits, cardNumberFormatting } from "./../../utils/numberFormat";
 
 export default function CardDetailsForm() {
   const dobRef = useRef();
@@ -22,12 +18,12 @@ export default function CardDetailsForm() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const cardDetails = {
-      cardType,
-      cardName,
-      cardNumber,
-      expirationDate
-    };
+    // const cardDetails = {
+    //   cardType,
+    //   cardName,
+    //   cardNumber,
+    //   expirationDate
+    // };
     if (
       cardType === "" ||
       cardNumber.length < 16 ||
