@@ -2,34 +2,34 @@ import { useEffect } from "react";
 import { findAngles, getAngleInRad } from "./../../../utils/pie-chart";
 
 export default function DonutChart({ colors }) {
-  const innerColors = ["#1EC6B8", "#FF6195", "#FFB11F", "#3464F3"];
-  const loans = [
-    {
-      length: 100,
-      amount: 100,
-      title: "Entertainment"
-    },
-    {
-      length: 210,
-      amount: 100,
-      title: "Bill Expense"
-    },
-    {
-      length: 230,
-      amount: 100,
-      title: "Investment"
-    },
-    {
-      length: 250,
-      amount: 100,
-      title: "Others"
-    }
-  ];
-
   // const [rotationAngle, setRotationAngle] = useState(56);
   // let angle = 34;
-  let rotationAngle = 0;
   useEffect(() => {
+    let rotationAngle = 0;
+    const innerColors = ["#1EC6B8", "#FF6195", "#FFB11F", "#3464F3"];
+    const loans = [
+      {
+        length: 100,
+        amount: 100,
+        title: "Entertainment"
+      },
+      {
+        length: 210,
+        amount: 100,
+        title: "Bill Expense"
+      },
+      {
+        length: 230,
+        amount: 100,
+        title: "Investment"
+      },
+      {
+        length: 250,
+        amount: 100,
+        title: "Others"
+      }
+    ];
+
     let lengths;
     const screenWidth = window.innerWidth;
     if (screenWidth >= 1280) {
@@ -137,7 +137,7 @@ export default function DonutChart({ colors }) {
       chart.appendChild(sliceContainer);
       chart.appendChild(hole);
     }
-  }, []);
+  }, [colors]);
 
   return (
     <div
