@@ -2,7 +2,6 @@ import { IncomeIcon } from "../../svg";
 import BriefcaseIcon from "../../svg/BriefcaseIcon";
 import GraphIcon from "../../svg/GraphIcon";
 import UserIcon2 from "../../svg/UserIcon2";
-import LifeInsuranceIcon from "../../svg/LifeInsuranceIcon";
 import SafetyShieldIcon from "../../svg/SafetyShieldIcon";
 
 export default function BankServicesItem({ service }) {

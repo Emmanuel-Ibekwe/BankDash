@@ -1,4 +1,3 @@
-import { CardIcon, PaypalIcon, CoinIcon } from "../../svg";
 import Transaction from "./Transaction";
 
 export default function RecentTransactions() {
