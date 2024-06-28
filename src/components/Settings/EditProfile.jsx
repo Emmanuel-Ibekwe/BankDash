@@ -107,7 +107,7 @@ export default function EditProfile() {
             <img
               src={readablePicture ? readablePicture : profilePic}
               alt="profile pic "
-              className="w-[170px] min-[670px]:w-[130px] h-[170px] min-[670px]:h-[130px] rounded-full"
+              className="object-contain w-[170px] min-[670px]:w-[130px] h-[170px] min-[670px]:h-[130px] rounded-full"
             />
             <div
               onClick={() => imgRef.current.click()}
