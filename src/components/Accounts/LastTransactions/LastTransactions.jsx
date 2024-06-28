@@ -1,4 +1,3 @@
-import { hideSomeDigits } from "../../../utils/numberFormat";
 import LastTransactionRow from "./LastTransactionRow";
 
 export default function LastTransactions() {
