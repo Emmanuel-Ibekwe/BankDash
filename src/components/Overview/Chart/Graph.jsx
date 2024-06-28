@@ -4,13 +4,24 @@ import CompositeBar from "./Bar/CompositeBar";
 
 export default function Graph() {
   const [yValues, setYValues] = useState([]);
-  const deposits = [490, 340, 320, 490, 150, 395, 400];
-  const withdrawals = [240, 120, 260, 370, 245, 245, 340];
+  const [deposits, setDeposits] = useState([490, 340, 320, 490, 150, 395, 400]);
+  const [withdrawals, setWithdrawals] = useState([
+    240,
+    120,
+    260,
+    370,
+    245,
+    245,
+    340
+  ]);
+
   const days = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
 
   useEffect(() => {
+    setDeposits(prev => prev);
+    setWithdrawals(prev => prev);
     setYValues(getYAxisValues(deposits, withdrawals));
-  }, []);
+  }, [deposits, withdrawals]);
 
   return (
     <div className="z-20 lg:min-w-[487px] w-full h-[261px] xl:h-[345px]  flex-initial bg-white pr-1 min-[900px]:pr-4 pl-8 pt-6 !pb-10 box-border rounded-3xl">
