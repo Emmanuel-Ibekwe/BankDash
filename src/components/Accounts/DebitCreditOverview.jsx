@@ -1,11 +1,7 @@
-import { useEffect, useState } from "react";
 import { numberWithCommas } from "./../../utils/numberFormat";
-import { getYAxisValues } from "./../../utils/graph";
 import CompositeBar from "./Bars/CompositeBar";
 
 export default function DebitCreditOverview() {
-  const [yValues, setYValues] = useState([]);
-
   const debits = [490, 340, 320, 490, 150, 395, 400];
   const credits = [240, 120, 260, 370, 245, 245, 340];
   const days = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
