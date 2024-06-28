@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
 import {
   TransferIcon,
   UserIcon,
@@ -7,9 +6,7 @@ import {
   InvestmentIcon,
   CreditCardIcon,
   LoanIcon,
-  ServiceIcon,
-  EconometricsIcon,
-  SettingIcon
+  ServiceIcon
 } from "../../svg";
 import BankDashIcon from "../../assets/bankdash_icon.png";
 import CloseIcon from "./../../svg/Close";
