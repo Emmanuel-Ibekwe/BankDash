@@ -38,10 +38,7 @@ export default function CardSetting() {
         </div>
         <div className="flex space-x-4 xl:space-x-6 items-center justify-start">
           <div className="w-[45px] xl:w-[60px] h-[45px] xl:h-[60px] bg-[#FFE0EB] rounded-2xl flex items-center justify-center">
-            <GoogleLogo
-              className="fill-[#FF82AC]"
-              className="w-5 xl:w-[25px] h-5 xl:h-[25px]"
-            />
+            <GoogleLogo className="w-5 xl:w-[25px] h-5 xl:h-[25px] fill-[#FF82AC]" />
           </div>
           <div>
             <p className="text-text_3 font-medium text-xs xl:text-base">
@@ -54,10 +51,7 @@ export default function CardSetting() {
         </div>
         <div className="flex space-x-4 xl:space-x-6 items-center justify-start">
           <div className="w-[45px] xl:w-[60px] h-[45px] xl:h-[60px] bg-[#DCFAF8] rounded-2xl flex items-center justify-center">
-            <AppleIcon
-              className="fill-[#16DBCC]"
-              className="w-5 xl:w-[25px] h-5 xl:h-[25px]"
-            />
+            <AppleIcon className="w-5 xl:w-[25px] h-5 xl:h-[25px] fill-[#16DBCC]" />
           </div>
           <div>
             <p className="text-text_3 font-medium text-xs xl:text-base">
@@ -70,10 +64,7 @@ export default function CardSetting() {
         </div>
         <div className="flex space-x-4 xl:space-x-6 items-center justify-start">
           <div className="w-[45px] xl:w-[60px] h-[45px] xl:h-[60px] bg-[#DCFAF8] rounded-2xl flex items-center justify-center">
-            <AppleIcon
-              className="fill-[#16DBCC]"
-              className="w-5 xl:w-[25px] h-5 xl:h-[25px]"
-            />
+            <AppleIcon className="w-5 xl:w-[25px] h-5 xl:h-[25px] fill-[#16DBCC]" />
           </div>
           <div>
             <p className="text-text_3 font-medium text-xs xl:text-base">
