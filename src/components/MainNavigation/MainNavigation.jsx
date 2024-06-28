@@ -6,8 +6,7 @@ import {
   InvestmentIcon,
   CreditCardIcon,
   LoanIcon,
-  ServiceIcon,
-  EconometricsIcon
+  ServiceIcon
 } from "../../svg";
 import BankDashIcon from "../../assets/bankdash_icon.png";
 import MobileNav from "./MobileNav";
