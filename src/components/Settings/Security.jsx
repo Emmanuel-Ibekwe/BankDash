@@ -13,11 +13,11 @@ export default function Security() {
       return;
     }
 
-    const data = {
-      enable2FA,
-      currentPassword,
-      newPassword
-    };
+    // const data = {
+    //   enable2FA,
+    //   currentPassword,
+    //   newPassword
+    // };
 
     setEnable2FA(false);
     setCurrentPassword("");
