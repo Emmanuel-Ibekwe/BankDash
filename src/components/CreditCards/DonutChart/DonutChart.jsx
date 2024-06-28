@@ -35,7 +35,7 @@ export default function DonutChart({ colors }) {
     if (screenWidth >= 1280) {
       lengths = [180, 120, 130, 150];
     } else {
-      lengths = [160, 100, 110, 130];
+      lengths = [150, 90, 100, 120];
     }
 
     console.log("loans: ", findAngles(loans));
@@ -67,8 +67,14 @@ export default function DonutChart({ colors }) {
       sliceContainer.style.height = `${radius}px`;
       sliceContainer.style.backgroundColor = `${color}`;
 
-      slice.style.width = `${75}px`;
-      slice.style.height = `${75}px`;
+      if (screenWidth >= 1280) {
+        slice.style.width = `${75}px`;
+        slice.style.height = `${75}px`;
+      } else {
+        slice.style.width = `${65}px`;
+        slice.style.height = `${65}px`;
+      }
+
       slice.style.backgroundColor = innerColor;
       sliceContainer.style.transform = `rotate(${rotate}deg)`;
 
@@ -142,7 +148,7 @@ export default function DonutChart({ colors }) {
   return (
     <div
       id="donut-chart"
-      className=" w-[280px] min-[900px]:w-[180px] xl:w-[280px] h-[160px] min-[900px]:h-[170px] xl:h-[188px] relative"
+      className=" w-[280px] min-[900px]:w-[180px] xl:w-[280px] h-[150px] min-[900px]:h-[170px] xl:h-[188px] relative"
     ></div>
   );
 }
