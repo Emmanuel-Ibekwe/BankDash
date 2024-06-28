@@ -1,9 +1,7 @@
-import { useEffect } from "react";
 import DonutChart from "./DonutChart/DonutChart";
 
 export default function CardExpenseStatistics() {
   const colors = ["#16DBCC", "#FF82AC", "#FFBB38", "#4C78FF"];
-  const banks = ["dbl", "abm", "brc", "mcp"];
 
   return (
     <div className="w-full min-[820px]:w-[31.82%]">
