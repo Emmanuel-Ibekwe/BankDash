@@ -26,7 +26,7 @@ export default function TransactionRow({
       <div className="w-[18%] hidden min-[890px]:block">{date}</div>
       <div
         className={`min-[890px]:w-[10%] ${
-          isIncome ? "text-[#FE5C73]" : "text-[#16DBAA]"
+          isIncome ? "text-[#16DBAA]" : "text-[#FE5C73]"
         }`}
       >
         {isIncome ? "+" : "-"}${amount}
