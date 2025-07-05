@@ -6,7 +6,7 @@ This is a bank dashboard of a fictitious bank knon as BankDash.
 
 ## 🚀 Project Link
 
-🔗 [Click here to access the link to the website](https://bankdashdashboard.netlify.app/)
+🔗 <a href="https://bankdashdashboard.netlify.app/" target="_blank">🔗 Click here to access the website</a>
 
 ## 📦 Installation
 
