@@ -1,6 +1,6 @@
 # BankDash
 
-This is a bank dashboard of a fictitious bank knon as BankDash.
+This is a bank dashboard of a fictitious bank known as BankDash.
 
 ---
 
