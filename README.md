@@ -12,6 +12,6 @@ This is a bank dashboard of a fictitious bank known as BankDash.
 
 ```bash
 git clone https://github.com/Emmanuel-Ibekwe/BankDash.git
-cd your-repo-name
+cd BankDash
 npm install
 npm start
